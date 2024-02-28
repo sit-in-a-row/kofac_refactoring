@@ -1,0 +1,592 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+@font-face {
+    font-family: 'Cafe24Moyamoya';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/Cafe24Moyamoya-Face-v1.0.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Medium.woff2') format('woff2');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #20232C;
+    word-break: keep-all;
+}
+
+body {
+    display: flex;
+}
+
+:root {
+    --font-quizTitle: 8.2vh;
+    --font-quizTitle-weight: 500;
+
+    --font-quizQuestion: 3.6vh;
+    --font-quizQuestion-weight: 700;
+
+    --font-quizSelection: 3.4vh;
+    --font-quizSelection-weight: 500;
+
+    --font-checkListSelection: 3.2vh;
+    --font-checkListSelection-weight: 500;
+
+    --font-answerTitle: 10vh;
+    --font-answerTItle-weight: 500;
+
+    /* font-size */
+    --font-h1: 5.8vh;
+    --font-h1-weight: 500;
+    --font-h1-margin: 20px;
+
+    --font-h2: 3.1vh;
+    --font-h2-weight: 900;
+
+    --font-h3: 2.9vh;
+    --font-h3-weight: 700;
+
+    --font-p: 2.5vh;
+    --font-p-weight: 500;
+    
+    --font-padding: 0;
+    --font-margin: 5px 15px;
+    
+    --font-headerIndex: 36px;
+    
+    /* color */
+    --color-blue1: #2d82FA;
+    --color-blue2: #002073;
+    --color-white: #ffffff;
+    --color-yellow: #ffda40;
+    --color-green: #00d424;
+    --color-red: #fd2626;
+    --color-black: #000000;
+    --color-gray1: #2d2d2d;
+    --color-gray2: #384051;
+    --color-gray3: #858899;
+    --color-gray4: #E1E1E8;
+    
+    /* btn-big */
+    --btn-big-border-radius: 10px;
+    --btn-big-border: none;
+    --btn-big-width: max-content;
+    --btn-big-height: auto;
+    --btn-big-font-size: 3vh;
+    --btn-big-font-weight: 500;
+    --btn-big-margin: 0.5vh;
+    --btn-big-padding: 3vh 3vh;
+    
+    /* btn-small */
+    --btn-small-border-radius: 10px;
+    --btn-small-border: none;
+    --btn-small-width: max-content;
+    --btn-small-height: auto;
+    --btn-small-font-size: 20px;
+    --btn-small-font-weight: 500;
+    --btn-small-margin: 3px;
+    --btn-small-padding: 8px 16px;
+    
+    /* btn-tiny */
+    --btn-tiny-border-radius: 10px;
+    --btn-tiny-border: none;
+    --btn-tiny-width: max-content;
+    --btn-tiny-height: auto;
+    --btn-tiny-font-size: 12px;
+    --btn-tiny-font-weight: 200;
+    --btn-tiny-margin: 2px;
+    --btn-tiny-padding: 4px 8px;
+    
+    /* card */
+    --card-border: 1px solid #858899;
+    --card-border-radius: 20px;
+    --card-margin: 5px 15px;
+    --card-padding: 10px;
+}
+
+/* texts */
+
+.quizTitle {
+    font-family: 'Cafe24Moyamoya';
+    font-size: var(--font-quizTitle);
+    font-weight: var(--font-quizTitle-weight);
+    color: var(--color-white);
+}
+
+.quizQuestion {
+    font-family: 'Pretendard';
+    font-size: var(--font-quizQuestion);
+    font-weight: var(--font-quizQuestion-weight);
+}
+
+h1 {
+    /* font-family: 'Cafe24Moyamoya';
+    font-size: var(--font-h1); */
+    font-family: 'Cafe24Moyamoya';
+    font-size: var(--font-h1);
+    font-weight: var(--font-h1-weight);
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Pretendard';
+    font-size: var(--font-h2);
+    font-weight: var(--font-h2-weight);
+    /* padding: var(--font-padding);
+    padding: var(--font-margin); */
+}
+
+h3 {
+    font-family: 'Pretendard';
+    font-size: var(--font-h3);
+    font-weight: var(--font-h3-weight);
+}
+
+p {
+    font-size: var(--font-p);
+    /* padding: var(--font-padding);
+    padding: var(--font-margin); */
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    font-family: 'Pretendard';
+    font-size: var(--font-h3);
+    font-weight: var(--font-h3-weight);
+    line-height: 4vh;
+    letter-spacing: -1px;
+}
+
+.contentsUl {
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+    gap: 0.8vw;
+}
+
+.contentsUl-sub {
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+    gap: 0.2vw;
+}
+
+.contentsUl-sub li {
+    font-size: var(--font-p);
+    font-weight: var(--font-p-weight);
+}
+
+.contentsP {
+    font-family: 'Pretendard';
+    font-size: var(--font-h3);
+    font-weight: var(--font-h3-weight);
+    line-height: 4vh;
+    padding-top: 5vh;
+    padding-right: 10vw;
+}
+
+.grayText {
+    font-family: 'Pretendard';
+    font-size: var(--font-p);
+    color: var(--color-gray3);
+}
+
+/* btn colors */
+
+.btn-blue1 {
+    background-color: var(--color-blue1);
+    color: var(--color-white);
+}
+
+.btn-blue1:hover {
+    background-color: var(--color-blue2);
+}
+
+.btn-blue2 {
+    background-color: var(--color-blue2);
+    color: var(--color-white);
+}
+
+.btn-blue2:hover {
+    background-color: var(--color-blue1);
+}
+
+.btn-white {
+    background-color: var(--color-blue1);
+    color: var(--color-white);
+}
+
+.btn-yellow {
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+}
+
+.btn-green {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.btn-red {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+
+.btn-black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+
+.btn-gray1 {
+    background-color: var(--color-gray1);
+    color: var(--color-white);
+}
+
+
+.btn-gray2 {
+    background-color: var(--color-gray2);
+    color: var(--color-white);
+}
+
+
+.btn-gray3 {
+    background-color: var(--color-gray3);
+    color: var(--color-white);
+}
+
+
+.btn-gray4 {
+    background-color: var(--color-gray4);
+    color: var(--color-white);
+}
+
+.btn-big {
+    font-family: 'Pretendard';
+    width: var(--btn-big-width);
+    height: var(--btn-big-height);
+    border-radius: var(--btn-big-border-radius);
+    border: var(--btn-big-border);
+    font-size: var(--btn-big-font-size);
+    font-weight: var(--btn-big-font-weight);
+    margin: var(--btn-big-margin);
+    padding: var(--btn-big-padding);
+    cursor: pointer;
+}
+
+.btn-small {
+    font-family: 'Pretendard';
+    width: var(--btn-small-width);
+    height: var(--btn-small-height);
+    border-radius: var(--btn-small-border-radius);
+    border: var(--btn-small-border);
+    font-size: var(--btn-small-font-size);
+    font-weight: var(--btn-small-font-weight);
+    margin: var(--btn-small-margin);
+    padding: var(--btn-small-padding);
+    cursor: pointer;
+}
+
+.btn-tiny {
+    font-family: 'Pretendard';
+    width: var(--btn-tiny-width);
+    height: var(--btn-tiny-height);
+    border-radius: var(--btn-tiny-border-radius);
+    border: var(--btn-tiny-border);
+    font-size: var(--btn-tiny-font-size);
+    font-weight: var(--btn-tiny-font-weight);
+    margin: var(--btn-tiny-margin);
+    padding: var(--btn-tiny-padding);
+    cursor: pointer;
+}
+
+
+.infoPgBtn {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* card */
+
+.card {
+    border: var(--card-border);
+    border-radius: var(--card-border-radius);
+    margin: var(--card-margin);
+    padding: var(--card-padding);
+}
+
+.infoCard {
+    background-color: var(--color-blue2);
+    width: 100%;
+    margin-left: 3vw;
+    border-radius: 30px;
+    padding: 2vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoText {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 90%;
+    margin-top: 3vh;
+}
+
+.infoCardTitle {
+    font-family: 'Pretendard';
+    font-size: var(--font-h2);
+    margin-bottom: 2vh;
+}
+
+.infoCardParagraph {
+    font-family: 'Pretendard';
+    font-size: var(--font-p);
+    font-weight: 300;
+}
+
+/* Img */
+
+.backgroundImg {
+    position: absolute;
+    border-radius: 12px;
+    max-height: 100%;
+    margin: 0;
+}
+
+.infoGif {
+    border-radius: 30px;
+    padding: 2vh;
+    background-color: var(--color-white);
+    height: auto;
+}
+
+/* contentsSection */
+
+.contentsSection {
+    position: absolute;
+}
+
+.headerIndex {
+    width: max-content;
+    font-family: 'Pretendard';
+    background-color: var(--color-blue2);
+    color: var(--color-white);
+    font-size: 32px;
+    padding: 17.5px 40px;
+    margin-top: 2px;
+    letter-spacing: -0.1px;
+    border-radius: 60px;
+}
+
+.contentsCanvas {
+    background-color: white;
+    width: 100%;
+    border-radius: 35px;
+}
+
+.canvasTitleContainer {
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.canvasTitleBullet {
+    background-color: var(--color-blue1);
+    border-radius: 30px;
+}
+
+.contentsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentsArticle {
+    width: 90%;
+}
+
+/* 퀴즈/체크리스트 영역 관련 스타일 */
+
+.quizBlackOut {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.resultInfoContainer {
+    position: absolute;
+    z-index: 10;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.characterQuizResult {
+    max-height: 50vh;
+    max-width: auto;
+}
+
+.answerTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.answerTitle {
+    font-family: 'Cafe24Moyamoya';
+    font-size: var(--font-answerTitle);
+    font-weight: var(--font-answerTItle-weight);
+    color: var(--color-white);
+    margin-left: 3vw;
+    margin-bottom: 3vh;
+}
+
+.textQuizResult {
+    background-color: var(--color-gray2);
+    color: var(--color-white);
+    font-size: var(--font-h3);
+    border-radius: 100px;
+}
+
+.answerUl {
+    font-family: 'Pretendard';
+    font-size: var(--font-h3);
+    font-weight: var(--font-p-weight);
+    padding: 5vh 3vw 5vh 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.quizPgTitleContainer{ 
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.quizQuestion {
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.quizSelectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.quizSelection {
+    font-family: 'Pretendard';
+    font-size: var(--font-quizSelection);
+    font-weight: var(--font-quizSelection-weight);
+    background-color: var(--color-blue1);
+    color: var(--color-white);
+    padding: 3vh 5vw;
+    width: 45vw;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkListSelection {
+    font-family: 'Pretendard';
+    font-size: var(--font-checkListSelection);
+    font-weight: var(--font-checkListSelection-weight);
+    background-color: var(--color-blue1);
+    color: var(--color-white);
+    padding: 3vh 8.8vw;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quizSelection:hover, .checkListSelection:hover {
+    background-color: var(--color-blue2);
+}
+
+.graphic {
+    position: absolute;
+}
+
+.checkBox {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.checkIcon {
+    transform: translate(5%, -5%);
+}
+
+/* 네비게이션 하단바 */
+
+.bottomBar {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--color-gray2);
+    padding: 1vh 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.homeBtnContainer { grid-area: 1 / 1 / 2 / 2; }
+.bottomBtnContainer { grid-area: 1 / 2 / 2 / 3; }
+.empty { grid-area: 1 / 3 / 2 / 4; }
+
+.homeBtnContainer {
+    display: flex;
+    padding-left: 2vw;
+}
+
+.homeBtn {
+    font-family: 'Pretendard';
+    font-size: 1.5vh;
+    background-color: transparent;
+    color: var(--color-gray3);
+    border: none;
+}
+
+.homeBtn:hover {
+    color: var(--color-gray4);
+}
+
+.bottomBtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12vw;
+}
+
+.bottomBtnContainer *:hover {
+    background-color: var(--color-blue2);
+}
+
+.contentsFrame {
+    position: absolute;
+    border: none;
+    top: 0;
+}

@@ -1,0 +1,260 @@
+* {
+    font-family: 'Pretendard', sans-serif;
+    overflow: hidden;
+    word-break: keep-all;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+body {
+    background-color: white;
+}
+
+#globalContainer {
+    display: flex;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -40%);
+    height: 80vh;
+    width: 100vw;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.area {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* leftArea 정의 */
+
+.areaTitle {
+    margin-left: 1vw;
+}
+
+/* 테이블 스타일 */
+.rules-table-container {
+    overflow: hidden;
+}
+
+#rulesTable {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 500px;
+}
+
+#scrollContainer {
+    max-height: 60vh;
+    overflow: auto;
+}
+
+/* 테이블 헤더 스타일 */
+#rulesTable thead th {
+    background-color: #F7F7FA;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+    padding: 15px;
+    padding-left: 20px;
+    border-top: 1px solid #ddd; /* 구분선 스타일 */
+    border-bottom: 1px solid #ddd; /* 구분선 스타일 */
+}
+
+#rulesTable tbody {
+    overflow-y: auto;
+}
+
+/* 테이블 셀 스타일 */
+#rulesTable td {
+    padding: 14px;
+    padding-right: 70px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ddd; /* 구분선 스타일 */
+}
+
+/* 테이블 행 호버 스타일 */
+#rulesTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* 좌측 입력란 스타일 */
+
+.rule-form-container {
+    border-top: 1px solid #ddd;
+}
+
+.input-group {
+    padding: 3vh 2vw;
+    display: flex;
+    gap: 0.3vw;
+}
+
+input {
+    border: 1px solid #ddd;
+    padding: 1vh 1vw;
+    border-radius: 10px;
+}
+
+#inputRule, #responseRule {
+    width: 26vw;
+}
+
+#leftInput {
+    border-radius: 30px;
+    background-color: white;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    background-color: #2d82fa;
+    color: white;
+    padding: 0 0.5vw;
+    transition: 0.2s ease-in-out;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #1959B8;
+    transition: 0.2s ease-in-out;
+}
+
+#userInput:focus, #responseRule:focus, #inputRule:focus {
+    border-color: #2d82fa;
+    outline: none;
+}
+
+/* rightArea 정의 */
+
+#rightArea {
+    border: 3px solid #2d82fa;
+}
+
+#rightInput {
+    border-top: 3px solid #2d82fa;
+    width: 23vw;
+    padding-top: 2.4vh;
+}
+
+#userInput {
+    border: none;
+    width: 100%;
+}
+
+#rightInputContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#sendBtn {
+    margin-right: 0.2vw;
+    font-size: 2.5vh;
+    padding: 0 0.2vw;
+    border-radius: 8px;
+}
+
+/* 채팅 메세지 */
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+    border-top: 3px solid #2d82fa;
+}
+
+.chatbox .user-message {
+    background-color: #BFD7F9;
+    width: max-content;
+    padding: 1vh 0.5vw;
+    align-self: flex-end;
+    border-radius: 20px;
+    margin: 1.5vh 0.8vw;
+    border: 1px solid rgba(0,0,0,0.1);
+    min-height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bot-message {
+    margin: 1vh 0.8vw;
+    min-height: 10vh;
+}
+
+.bot-message-container {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.bot-message-icon {
+    font-size: 1.9vh;
+    font-weight: 500;
+    padding: 0.7vh 0.5vw;
+    border-radius: 30px;
+    background-color: #1EBAD2;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: white;
+    height: max-content;
+    width: max-content;
+}
+
+.chatbox .bot-message-name {
+    font-weight: 700;
+}
+
+.chatbox .bot-message-response {
+    border: 1px solid #ddd;
+    font-weight: 500;
+    margin-top: 1vh;
+    padding: 1vh 0.5vw;
+    border-radius: 15px;
+    max-width: 15vw;
+    width: max-content;
+}
+
+@keyframes showChat {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.showChat {
+    animation: showChat 0.2s ease-in-out;
+}
+
+.fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+}

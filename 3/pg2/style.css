@@ -1,0 +1,15 @@
+.contentsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentsArticle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contentsP {
+    width: max-content;
+}

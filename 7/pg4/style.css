@@ -1,0 +1,14 @@
+.contentsCanvas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quizQuestion {
+    transform: translateY(-70%);
+}
+
+.quizSelectionContainer {
+    margin: 0;
+    transform: translateY(-10%);
+}

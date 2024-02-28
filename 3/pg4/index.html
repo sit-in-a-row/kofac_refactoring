@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/styles/common.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ai_1_pg4</title>
+</head>
+<body>
+    <img id="img4" class="backgroundImg" src="../../static/imgs/common/background_quiz.png" alt="background">
+    <script type="module" src="../../static/src/quizPgTemplate.js"></script>
+    <script type="module" src="../../static/src/quizAnswerCheck.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // 정답 입력
+        const answer = 4
+
+        // 해설 입력
+        const answerText = `
+        <ul class="answerUl">
+            <ul> • A* 탐색은 모든 경로를 탐색하지 않고, 선택적으로 탐색한다.<br></ul>
+            <ul> • A* 탐색은 정보 이용 탐색의 대표적인 탐색 알고리즘이다.<br></ul>
+            <ul> • 탐욕적 최상 우선 탐색과 거의 유사한 방식이되 평가함수에서는 다른 점이 있다.</ul>
+        </ul>
+        `
+    </script>
+</body>
+</html>

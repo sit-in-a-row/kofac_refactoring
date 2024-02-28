@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>챗봇 초안</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <img id="header" src="header.svg">
+    <div id="globalContainer">
+        <div class="area" id="leftArea">
+            <div class="rules-table-container">
+                <h1 class="areaTitle">급식봇 데이터</h1>
+                <div id="scrollContainer"> <!-- 스크롤을 위한 컨테이너 추가 -->
+                    <table id="rulesTable">
+                        <thead>
+                            <tr>
+                                <th>입력</th>
+                                <th>응답</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 데이터 로우 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+
+            <div class="rule-form-container">
+                <form id="ruleForm">
+                    <div class="input-group" id="leftInput">
+                        <input type="text" id="inputRule" placeholder="질문을 입력하세요.">
+                        <input type="text" id="responseRule" placeholder="질문에 대한 응답을 입력하세요.">
+                        <button type="submit" id="ruleButton">추가하기</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        
+        <div class="area" id="rightArea">
+
+            <div class="chat-container">
+                <h1 id="rightAreaTitle" class="areaTitle">채팅</h1>
+                <div class="chatbox" id="chatbox"></div>
+            </div>
+
+            <div class="input-group" id="rightInput">
+                <div id="rightInputContainer">
+                    <input type="text" id="userInput" placeholder="대화를 시작해보세요!">
+                    <button id="sendBtn" onclick="sendMessage()">&#8593;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

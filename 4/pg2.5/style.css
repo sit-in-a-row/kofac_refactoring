@@ -1,0 +1,10 @@
+.contentsArticle {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    gap: 5vh;
+}
+
+.contentsImg {
+    margin: 0 2vw;
+}

@@ -1,0 +1,54 @@
+.contentsP{
+    padding-right: 2vw;
+}
+
+.infoCard {
+    padding: 2vh 2vh;
+    justify-content: space-between;
+}
+
+.infoCardText {
+    font-family: 'Pretendard';
+    font-size: 2.3vh;
+    font-weight: 300;
+    line-height: 3vh;
+    color: var(--color-white);
+    margin-top: 2vh;
+}
+
+.infoCardGraphic {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.pageIndicator {
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 2vh;
+    border: 2px solid var(--color-white);
+}
+
+.arrowIcon {
+    cursor: pointer;
+}
+
+.pageIndicatorContainer {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.infoCardBottomContainer {
+    font-family: 'Pretendard';
+    font-size: var(--font-h3);
+    font-weight: var(--font-h3-weight);
+    display: flex;
+    align-items: baseline;
+    color: white;
+    gap: 1vw;
+    justify-items: flex-end;
+}
+
+.star {
+    cursor: pointer;
+}

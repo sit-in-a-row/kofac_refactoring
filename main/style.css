@@ -1,0 +1,32 @@
+.menuBox {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1vh;
+    padding-bottom: 2.5vh;
+}
+
+h2 {
+    margin: 1.5vh;
+}
+
+button {
+    font-family: 'Pretendard';
+    font-size: 2.2vh;
+    margin: 0.5vh 1.5vw;
+    background-color: white;
+    border: none;
+    text-align: left;
+    width: max-content;
+}
+
+button:hover {
+    color: var(--color-white);
+    background-color: var(--color-blue1);
+    border-radius: 20px;
+}

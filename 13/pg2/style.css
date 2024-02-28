@@ -1,0 +1,13 @@
+.contentsP{
+    padding-right: 1vw;
+}
+
+.infoCard {
+    width: auto;
+    max-width: 31vw;
+    padding: 2vh 3vh;
+}
+
+.infoGif {
+    padding: 0 1vw;
+}

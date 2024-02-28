@@ -1,0 +1,12 @@
+.contentsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentsImg {
+    margin: 0 1vw;
+}
+
+.contentsUl {
+    gap: 1vh;
+}
