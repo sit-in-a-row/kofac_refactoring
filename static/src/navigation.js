@@ -28,7 +28,7 @@ homeBtn.innerHTML = '메인으로 돌아가기';
 homeBtnContainer.appendChild(homeBtn);
 
 homeBtn.addEventListener('click', ()=>{
-    window.location.href = '../main';
+    window.location.href = '../';
 });
 
 // css 그리드를 위한 공백 영역
